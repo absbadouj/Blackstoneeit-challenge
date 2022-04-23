@@ -1,0 +1,1 @@
+export * as default from "./footer-nav.interface"

@@ -1,1 +1,10 @@
-<p>menu works!</p>
+<nav class="main-menu">
+  <ul class="main-menu__list">
+    <li class="main-menu__item" *ngFor="let navItem of menuList">
+      <a [href]="navItem.link">
+        <i [class]="navItem.icon"></i>
+        {{ navItem.text }}
+      </a>
+    </li>
+  </ul>
+</nav>

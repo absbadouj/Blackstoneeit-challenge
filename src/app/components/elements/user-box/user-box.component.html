@@ -1,0 +1,8 @@
+<div class="user-box">
+  <img class="user-box__img" [src]="user.avatar" />
+  <div class="user-box__data">
+    <p class="name">{{ user.name }}</p>
+    <p class="username" *ngIf="hasUserName">{{ user.userName }}</p>
+  </div>
+  <button class="follow" *ngIf="hasFollowBtn">Follow</button>
+</div>

@@ -1,1 +1,20 @@
-<p>feed-item works!</p>
+<div class="feed-item">
+  <img class="feed-item__image" [src]="user.avatar" />
+  <div class="feed-item__data">
+    <app-user-box
+      [hasUserName]="false"
+      [user]="user"
+      entryClassImg="userName"
+    ></app-user-box>
+    <div class="actions">
+      <button (click)="likeFeed()">
+        <i class="fa-solid fa-heart"></i>
+        <span class="number">{{ numberLikes }}</span>
+      </button>
+      <button>
+        <i class="fa-solid fa-comment-dots"></i>
+        <span class="number">{{ numberComments }}</span>
+      </button>
+    </div>
+  </div>
+</div>

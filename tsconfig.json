@@ -16,7 +16,8 @@
     "importHelpers": true,
     "target": "es2017",
     "module": "es2020",
-    "lib": ["es2018", "dom"]
+    "lib": ["es2018", "dom"],
+    "strictPropertyInitialization": false
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
@@ -24,8 +25,11 @@
     "strictInputAccessModifiers": true,
     "strictTemplates": true
   },
-  "baseUrl": "./src/app/",
+  "baseUrl": "./src/",
   "paths": {
-    "@services/*": ["app/services/*"]
+    "@services/*": ["app/services/*"],
+    "@components/*": ["app/components/*"],
+    "@pages/*": ["app/pages/*"],
+    "@interfaces/*": ["app/interfaces/*"]
   }
 }

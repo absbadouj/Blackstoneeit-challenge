@@ -1,1 +1,7 @@
-<p>footer-nav works!</p>
+<nav class="footer-nav">
+  <ul class="footer-nav__list">
+    <li *ngFor="let navLink of navLinks">
+      <a [href]="navLink.link">{{ navLink.text }}</a>
+    </li>
+  </ul>
+</nav>

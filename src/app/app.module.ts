@@ -13,6 +13,8 @@ import { StoryItemComponent } from './components/story-item/story-item.component
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { UserBoxComponent } from './components/elements/user-box/user-box.component';
+import { StoreModule } from '@ngrx/store';
+import { LikesReducer } from './ngrx/reducers/likes.reducers';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,11 @@ import { UserBoxComponent } from './components/elements/user-box/user-box.compon
     HomePageComponent,
     UserBoxComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    StoreModule.forRoot({ LikesReducer }, {}),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
